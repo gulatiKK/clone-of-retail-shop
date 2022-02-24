@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="retail.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail shop</title>
+</head>
+<body>
+    <h1 class="heading">Welcome to the retail shop!</h1>
+   <br>
+   <table class="num"> 
+    <tr>
+        <tr>
+            <td>
+            Buying Price : $<label id="buyprice"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            Selling Price : $<label id="sellprice"></label>
+            </td>
+        </tr>
+        <tr>
+                <td>
+                Quantity: <label id="quantity"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                Profit: $<label id="profit"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Value of Stock: $<label id="total"></label>
+                </td>
+        </tr>
+        <tr>
+            <td>
+                
+            </td>
+        </tr>
+   </table>
+   <hr>
+
+   <div id="price_panel">
+
+    Buying price:
+    <input type="number" id="input_buying_price">
+    <br>
+    <br>
+    Selling Price:
+    <input type="number" id="input_selling_price">
+    <br>
+    <br>
+    Quantity:
+    <input type="number" id="input_stock_sell">
+    <br>
+    <br>
+    <button onclick="initialize()" class="proceed">Click Here to Proceed</button>
+   </div>
+   <div id="action_button_panel" style="display:none">
+    <button onclick="ShowStockPanel()">Add Stock</button>
+    <button onclick="ShowSellPanel()">Sell Quantity</button>
+   </div>
+   <div id="add_stock_panel" style="display: none;">
+    Add Quantity:
+    <input type="number" id="new_stock_qty">
+    <br>
+    <button onclick="AddStock()">Submit</button>
+   </div>
+
+   <div id="sell_stock_panel" style="display:none">
+    Sell Quantity:
+    <input type="number" id="sold_stock_qty">
+    <br>
+    <button onclick="SellStock()">Submit</button>
+   </div>
+</body>
+    <script src="retail.js"></script>
+</html>
